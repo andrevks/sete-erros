@@ -58,3 +58,9 @@ body .erros {
 .box:active{
     background-color:rgba(0, 47, 255, 0.3);
 }
+
+.modal-content {
+    width: 30%;
+    left: 35%;
+    top: 40%;
+}
