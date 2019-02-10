@@ -15,7 +15,10 @@ body {
     width: 50%;
     padding-top: 20px;
 }
-
+.barra .container-barra a {
+    color: white;
+    text-decoration: none;
+}
 body .container-img {
     display: flex;
     justify-content: center;
