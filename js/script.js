@@ -15,7 +15,7 @@ function pegarId(id){
 }
 
 function clicarBox(){  
-    $('input[type=checkbox]').prop('checked', false);
+    $('input[type=radio]').prop('checked', false);
     matriz.push(user_erro);
 
     for (var i = 0; i < 7; i++){
