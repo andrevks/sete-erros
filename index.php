@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +16,7 @@
 
         <!-- CSS LINKS -->
         <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/estilo-login.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
     </head>
 
     <body>
@@ -31,6 +34,19 @@
             <!-- FORM LOGIN -->
             <form class="form-estilo" method="post" action="login.php">
                 <h2 class="form-estilo-titulo"><img src="img/logo.png"></h2>
+
+                <!-- AVISO SEM SESSAO -->
+                    <?php
+                        if(isset($_SESSION['nao_autenticado'])):
+                    ?>  
+                        <div class="alert alert-danger" role="alert">
+                            <p>ERRO! Usuário ou senha inválidos!</p>
+                        </div>
+                    <?php
+                        endif;
+                        unset($_SESSION['nao_autenticado']);
+                    ?>
+
                 <label for="inputUser" class="sr-only">Usuário</label>
                 <input id="inputUser" name = "usuario" class="form-control" placeholder="Usuário" required="" autofocus="" type="text">
                 <label for="inputPassword" class="sr-only">Senha</label>

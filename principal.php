@@ -1,6 +1,13 @@
+<?php
+    session_start();
+    if(!$_SESSION['login'] == true and !$_SESSION['senha'] == true){
+        session_destroy();
+        header('Location: index.php');
+        exit();
+    }
+?>
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Estudos</title>
@@ -10,10 +17,20 @@
 
 <body>
     <!-- NAVBAR -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">Login</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbartext">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inserir Imagem<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout.php">Sair</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
