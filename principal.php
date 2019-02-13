@@ -20,23 +20,73 @@
         <nav class="navbar navbar-expand-lg navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Login</a>
+                    <a class="navbar-brand" href="principal.php">Sete-Erros</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbartext">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Inserir Imagem<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item a">
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="logout.php">Sair</a>
                         </li>
                     </ul>
+                    <span class="navbar-text">
+                        <p style="color: white;"><?php echo isset($_SESSION); ?></p>
+                    </span>
                 </div>
             </div>
         </nav>
 
     <main>
+        <?php
+            if(isset($_SESSION['prof'])):
+        ?>
         <!-- Container do Modal -->
+        <div class="container-modal">
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Teste!</h2>
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <label>Inserir um erro</label>
+                                    <input type="radio" name="resposta">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <label>Inserir um erro</label>
+                                    <input type="radio" name="resposta">
+                                </div>
+                            </div>
+                        </div>
+                         <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <label>Inserir um erro</label>
+                                    <input type="radio" name="resposta">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secundary" data-dismiss="modal" onclick="clicarBox()">Okay!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+            endif;
+        ?>
         <div class="container-modal">
             <div class="modal" id="modal">
                 <div class="modal-content">
