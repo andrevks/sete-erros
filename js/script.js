@@ -1,24 +1,35 @@
 //variaveis que guardará os erros que o usuario selecionar
-user_erro = " ";
-matriz = [];
-erros = [
-    '4 5',
-    '4 13',
-    '9 2',
-    '11 10',
-    '11 5',
-    '7 9'
-];
+let erro = " ";
+let cont = 0;
+let matriz = [];
+let erros = [];
+//erros = [
+    //'4 5',
+    //'4 13',
+    //'9 2',
+    //'11 10',
+    //'11 5',
+    //'7 9'
+//];
 
-function pegarId(id){
-    user_erro = id;
+function pegarId(id) {
+    erro = id;
 }
 
-function clicarBox(){  
+function inserirErro() {
     $('input[type=radio]').prop('checked', false);
-    matriz.push(user_erro);
+    erros.push(erro);
+    cont++;
+    for (var i = 0; i < 7; i++) {
+        console.log(erros[i]);
+    }
+}
 
-    for (var i = 0; i < 7; i++){
+function marcarErro() {  
+    $('input[type=radio]').prop('checked', false);
+    matriz.push(erro);
+
+    for (var i = 0; i < 7; i++) {
         console.log(matriz[i]);
     }
 
@@ -28,8 +39,12 @@ function clicarBox(){
 function compararErros() {
     let cont = 0;
 
-    for(var i = 0; i < 6; i++) {
-        for(var j = 0; j < 6; j++) {
+    for (var i = 0; i < 7; i++) {
+        console.log(erros[i]);
+    }
+
+    for(var i = 0; i < erros.lenght; i++) {
+        for(var j = 0; j < erros.lenght; j++) {
             if(matriz[i] == erros[j]){
                 cont++;
             }
