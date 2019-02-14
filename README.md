@@ -1,2 +1,2 @@
-# sete-erros
+# Sete-erros
 Jogo dos Setes Erros
