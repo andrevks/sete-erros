@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secundary" data-dismiss="modal" onclick="clicarBox()">Okay!</button>
+                        <button type="button" class="btn btn-secundary" data-dismiss="modal" onclick="inserirErro()">Okay!</button>
                     </div>
                 </div>
             </div>
@@ -87,6 +87,8 @@
         <?php
             endif;
         ?>
+
+
         <div class="container-modal">
             <div class="modal" id="modal">
                 <div class="modal-content">
@@ -121,7 +123,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secundary" data-dismiss="modal" onclick="clicarBox()">Okay!</button>
+                        <button type="button" class="btn btn-secundary" data-dismiss="modal" onclick="marcarErro()">Okay!</button>
                     </div>
                 </div>
             </div>
