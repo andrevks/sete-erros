@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Login 2.0</title>
+        <title>Sete Erros</title>
 
         <!-- CSS LINKS -->
         <link href="css/bootstrap.css" rel="stylesheet">
