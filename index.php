@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Sete Erros</title>
+        <title>Sete Erros0938245623486503247569023465902346598324754389207crazychega</title>
 
         <!-- CSS LINKS -->
         <link href="css/bootstrap.css" rel="stylesheet">
